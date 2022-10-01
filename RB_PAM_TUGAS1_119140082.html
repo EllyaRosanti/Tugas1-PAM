@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 50%;
+      }
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      th {
+        background-color: #0377fc;
+      }
+
+      tr:nth-child(even) {
+        background-color: #abd2ff;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Nama: Ellya Rosanti<br />
+      NIM: 119140082<br />
+      Kelas: RB
+    </p>
+
+    <h2>Tugas Individu 1 HTML Table</h2>
+
+    <table>
+      <tr>
+        <th>No</th>
+        <th>Nama</th>
+        <th>NIM</th>
+        <th>Nilai</th>
+        <th>Huruf Mutu</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Boy</td>
+        <td>123</td>
+        <td id="Nilai">60</td>
+        <td id="HurufMutu1"></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Aldi</td>
+        <td>124</td>
+        <td id="Nilai">70</td>
+        <td id="HurufMutu2"></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Ade</td>
+        <td>125</td>
+        <td id="Nilai">40</td>
+        <td id="HurufMutu3"></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Lita</td>
+        <td>121</td>
+        <td id="Nilai">90</td>
+        <td id="HurufMutu4"></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Dina</td>
+        <td>122</td>
+        <td id="Nilai">67</td>
+        <td id="HurufMutu5"></td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>Sakila</td>
+        <td>126</td>
+        <td id="Nilai">89</td>
+        <td id="HurufMutu6"></td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>Chan</td>
+        <td>127</td>
+        <td id="Nilai">85</td>
+        <td id="HurufMutu7"></td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>Sintha</td>
+        <td>128</td>
+        <td id="Nilai">35</td>
+        <td id="HurufMutu8"></td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>Dewi</td>
+        <td>129</td>
+        <td id="Nilai">70</td>
+        <td id="HurufMutu9"></td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>Randy</td>
+        <td>126</td>
+        <td id="Nilai">90</td>
+        <td id="HurufMutu10"></td>
+      </tr>
+    </table>
+
+    <script>
+      let A = parseInt(document.getElementById("Nilai").value);
+
+      function grade(nilai) {
+        if (nilai >= 80) {
+          return "A";
+        }
+        if (nilai >= 70 && nilai < 80) {
+          return "AB";
+        }
+        if (nilai >= 60 && nilai < 70) {
+          return "B";
+        }
+        if (nilai >= 50 && nilai < 60) {
+          return "BC";
+        }
+        if (nilai >= 40 && nilai < 50) {
+          return "C";
+        }
+        if (nilai >= 10 && nilai < 40) {
+          return "D";
+        } else {
+          return "E";
+        }
+      }
+      document.getElementById("HurufMutu1").innerHTML = grade(60);
+      document.getElementById("HurufMutu2").innerHTML = grade(70);
+      document.getElementById("HurufMutu3").innerHTML = grade(40);
+      document.getElementById("HurufMutu4").innerHTML = grade(90);
+      document.getElementById("HurufMutu5").innerHTML = grade(67);
+      document.getElementById("HurufMutu6").innerHTML = grade(89);
+      document.getElementById("HurufMutu7").innerHTML = grade(85);
+      document.getElementById("HurufMutu8").innerHTML = grade(35);
+      document.getElementById("HurufMutu9").innerHTML = grade(70);
+      document.getElementById("HurufMutu10").innerHTML = grade(90);
+    </script>
+  </body>
+</html>
